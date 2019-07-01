@@ -2,7 +2,7 @@ var kits = {};
 
 // 生成随机颜色
 // 1.生成三个随机整数
-kits.randomInt = function(n, m) {
+kits.randomInt = function (n, m) {
     return Math.floor(Math.random() * (m - n + 1) + n);
 }
 // // 封装一个可以获得随机颜色的函数
@@ -12,12 +12,12 @@ kits.randomColor = function () {
     var b = randomInt(0, 255);
     return 'rgb(' + r + ',' + g + ',' + b + ')';
 }
- 
+
 // 获取日期
 kits.date = function () {
     var dates = new Date();
     var y = dates.getFullYear();
-    var M = dates.getMonth()+1;
+    var M = dates.getMonth() + 1;
     var d = dates.getDate();
     var h = dates.getHours();
     var m = dates.getMinutes();
@@ -31,4 +31,14 @@ kits.date = function () {
     //时间的格式设置
     var time = y + '-' + M + '-' + d + ' ' + h + ':' + m + ':' + s;
     return time;
+}
+
+
+// 求1-10之间的随机整数
+kits.number = function () {
+    var r = Math.random();
+    r = r * 10 + 1;
+    console.log(r);
+    r = Math.floor(r);
+    console.log(r);
 }
