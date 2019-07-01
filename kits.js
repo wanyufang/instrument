@@ -1,14 +1,15 @@
 var kits = {};
 
-// 生成随机颜色
+// 生成随机整数
 kits.randomInt = function (n, m) {
     return Math.floor(Math.random() * (m - n + 1) + n);
 }
-// // 封装一个可以获得随机颜色的函数
+
+// 封装一个可以获得随机颜色的函数
 kits.randomColor = function () {
-    var r = randomInt(0, 255);
-    var g = randomInt(0, 255);
-    var b = randomInt(0, 255);
+    var r = kits.randomInt(0, 255);
+    var g = kits.randomInt(0, 255);
+    var b = kits.randomInt(0, 255);
     return 'rgb(' + r + ',' + g + ',' + b + ')';
 }
 
@@ -37,7 +38,5 @@ kits.date = function () {
 kits.number = function () {
     var r = Math.random();
     r = r * 10 + 1;
-    console.log(r);
     r = Math.floor(r);
-    console.log(r);
 }
