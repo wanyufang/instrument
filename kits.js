@@ -12,7 +12,7 @@ kits.randomColor = function () {
     var b = randomInt(0, 255);
     return 'rgb(' + r + ',' + g + ',' + b + ')';
 }
-
+ 
 // 获取日期
 kits.date = function () {
     var dates = new Date();
